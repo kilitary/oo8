@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /count/
+Disallow: /catalog/indistrict/
+
+Host: www.008.ru

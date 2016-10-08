@@ -1,0 +1,228 @@
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK|OPTIONS|PUT|DELETE)
+RewriteRule .* - [F]
+# Gzip
+# AddOutputFilterByType DEFLATE text/html text/css application/x-javascript application/javascript
+# <ifmodule mod_gzip.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript
+ # mod_gzip_on No
+Header always append X-Frame-Options SAMEORIGIN
+Header always append X-008-Engine evo20150401
+  # mod_gzip_dechunk Yes
+  # mod_gzip_keep_workfiles       No
+  # #mod_gzip_send_vary            On
+  # #mod_gzip_minimum_file_size    200
+  # mod_gzip_item_include file \.(html?|txt|css|js|php|pl|xml)$
+  # mod_gzip_item_include mime ^application/x-javascript.*
+  # mod_gzip_item_include mime ^text/.*
+  # mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+  # mod_gzip_item_exclude mime ^image/.* 
+  # mod_gzip_item_include handler ^cgi-script$
+SetOutputFilter DEFLATE
+ #</ifmodule>
+
+Options FollowSymLinks Includes ExecCGI Indexes
+#DirectoryIndex index.php index.html
+#AddType application/x-httpd-php5 .php
+AddDefaultCharset UTF-8
+php_value allow_url_fopen 1
+php_value allow_url_include 0
+php_value error_reporting 1
+php_value html_errors On
+#php_value upload_max_filesize 10M
+#php_value post_max_size 20M
+#php_value arg_separator.output &amp;
+php_flag magic_quotes_gpc On
+php_value error_log /usr/home/oo8/logs/php.log
+#recomend Off
+php_flag register_globals Off
+php_flag session.use_trans_sid off
+php_value session.gc_maxlifetime 86400
+#php_value session.cookie_lifetime 0
+php_value session.save_path "/tmp/session"
+#mbstring.func_overload 6  = no mail function overload
+php_value       mbstring.func_overload          6
+#php_admin_value mbstring.func_overload 6
+php_value       default_charset                 UTF-8
+php_value       mbstring.language               uni
+php_value       mbstring.internal_encoding      UTF-8
+#php_flag        mbstring.encoding_translation   on
+#php_value       mbstring.http_input            UTF-8,CP1251
+#php_value       mbstring.http_output           UTF-8
+php_value       mbstring.detect_order          UTF-8,CP1251
+#400 - Bad Request
+ErrorDocument 400 /error.php
+#401 - Unauthorized
+ErrorDocument 401 /error.php
+#402 - Payment Required
+ErrorDocument 402 /error.php
+#403 - Forbidden
+ErrorDocument 403 /error.php
+#404 - Not Found
+##########ErrorDocument 404 /index.php
+#405 - Method Not Allowed
+ErrorDocument 405 /error.php
+#406 - Not Acceptable
+ErrorDocument 406 /error.php
+#407 - Proxy Authentication Required
+ErrorDocument 407 /error.php
+#408 - Request Time-out
+ErrorDocument 408 /error.php
+#409 - Conflict
+ErrorDocument 409 /error.php
+#410 - Gone
+ErrorDocument 410 /error.php
+#411 - Length Required
+ErrorDocument 411 /error.php
+#412 - Precondition Failed
+ErrorDocument 412 /error.php
+#413 - Request Entity Too Large
+ErrorDocument 413 /error.php
+#414 - Request-URI Too Large
+ErrorDocument 414 /error.php
+#415 - Unsupported Media Type
+ErrorDocument 415 /error.php
+#500 - Internal Server Error
+#ErrorDocument 500 /error.php
+#501 - Not Implemented
+ErrorDocument 501 /error.php
+#502 - Bad Gateway
+ErrorDocument 502 /error.php
+#503 - Service Unavailable
+ErrorDocument 503 /error.php
+#504 - Gateway Time-out
+ErrorDocument 504 /error.php
+#505 - HTTP Version not supported 
+ErrorDocument 505 /error.php
+#AddHandler server-parsed .ssi
+RewriteEngine on
+# RewriteCond %{HTTP_HOST} !www\.008\.evodesign\.ru
+# RewriteCond %{HTTP_HOST} !demo\.008\.evodesign\.ru
+# RewriteCond %{HTTP_HOST} !demo\.it24\.ru
+# RewriteRule \/?(.*) http://www.008.evodesign.ru/$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^\/(css|js|images)\/.*$
+RewriteRule ^(.+)$ /it_sites/008.ru/templates%{REQUEST_URI} [L]
+RewriteCond %{REQUEST_URI} ^\/content\/.*$
+RewriteRule ^(.+)$ /it_sites/008.ru%{REQUEST_URI} [L]
+#RewriteCond %{REQUEST_URI} ^\/company\/.*getpricelist.*$
+#RewriteRule ^(.+)$ /price.php [L]
+#RewriteRule ^(.+)$ /it_sites/008.ru/content%{REQUEST_URI} [L]
+#RewriteCond %{HTTP_HOST} ^(www.)?oldsite.ru$
+#RewriteRule \/?(.*) http://www.newsite.ru/$1 [R=301,L]
+#ЧПУ sef.it module
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} (/|\.htm|\.php|\.html|/[^.]*)$  [NC]
+#RewriteRule ^(cat/) index.php
+#RewriteCond %{HTTP_REFERER} .
+#RewriteCond %{HTTP_REFERER} !^http://([^.]+\.)?macamica\. [NC]
+#RewriteCond %{HTTP_REFERER} !^http://([^.]+\.)?%{HTTP_HOST} [NC]
+#RewriteCond %{HTTP_REFERER} !google\. [NC]
+#RewriteCond %{HTTP_REFERER} !search\?q=cache [NC]
+#RewriteCond %{HTTP_REFERER} !msn\. [NC]
+#RewriteCond %{HTTP_REFERER} !yahoo\. [NC]
+#RewriteCond %{REQUEST_URI} !^/deny\.gif$
+#RewriteRule \.(gif|jpg|png)$ /deny.gif [NC,L]
+#RewriteCond %{HTTP_REFERER} .
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http://([^.]+\.)?macamica\. [NC]
+#RewriteCond %{HTTP_REFERER} !^http://(www\.)?%{HTTP_HOST}/.*$ [NC]
+#RewriteRule \.(js|css)$ - [F]
+#RewriteCond %{REQUEST_URI} !^/deny\.gif$
+#RewriteRule \.(png|gif|jpg|jpeg)$ /deny.gif [R,L]
+#RewriteRule ^company/([0-9]+)/? /?cat=firms/firmcard&cID=$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+#RewriteRule ^(.*[css|js|jpg|gif|png])$ templates/$1 [L,QSA]
+#RewriteRule ^(.*)$ index.php?cat=$1 [L,QSA]
+#RewriteRule ^(.+)$ /it_sites/008.ru/templates/%{REQUEST_URI}
+RewriteRule ^(.*)$ index.php [L,QSA]
+#RewriteRule ^([^.]+)$ index.php [L,QSA]
+########## Begin - Rewrite rules to block out some common exploits
+## If you experience problems on your site block out the operations listed below
+## This attempts to block the most common type of exploit `attempts`
+#
+# Block out any script trying to set a mosConfig value through the URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+# Block out any script trying to base64_encode crap to send via URL
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+# Block out any script that includes a <script> tag in URL
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+# Block out any script trying to set a PHP GLOBALS variable via URL
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+# Block out any script trying to modify a _REQUEST variable via URL
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+# Send all blocked request to homepage with 403 Forbidden error!
+RewriteRule ^(.*)$ index.php [F,L]
+#запрет многострочных get запросов а также :25
+#RewriteRule ((%3A|:)25|%0D%0A) - [G]
+#
+########## End - Rewrite rules to block out some common exploits
+# Expires
+ExpiresActive On
+ExpiresDefault "acces plus 5 month"
+ExpiresByType text/css "access plus 5 month"
+ExpiresByType application/javascript "access plus 5 month"
+ExpiresByType application/x-javascript "access plus 5 month"
+ExpiresByType image/png "access plus 5 month"
+ExpiresByType image/gif "access plus 5 month"
+ExpiresByType image/jpeg "access plus 5 month"
+ExpiresByType image/ico "access plus 5 month"
+#SetEnv gzip 
+#SetEnvIf mime image/bmp gzip=9
+
+
+Header append Vary: Accept-Encoding
+
+# 
+<ifModule mod_headers.c>
+  <filesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$"> 
+    Header set Cache-Control "max-age=2592000, public"
+  </filesMatch>
+  <filesMatch "\\.(css)$">
+    Header set Cache-Control "max-age=11604800, public"
+  </filesMatch>
+  <filesMatch "\\.(js)$">
+    Header set Cache-Control "max-age=11216000, private"
+  </filesMatch>
+  <filesMatch "\\.(xml|txt)$">
+    Header set Cache-Control "max-age=11216000, public, must-revalidate"
+  </filesMatch>
+  <filesMatch "\\.(html|htm|php)$">
+    Header set Cache-Control "max-age=1, private, must-revalidate"
+  </filesMatch>
+</ifModule>
+<ifModule mod_headers.c>
+  Header unset ETag
+</ifModule>
+FileETag None
+#SetEnvIfNoCase (mime text/css) or (mime image/jpeg) vary-agent
+#BrowserMatchNoCase \bMSIE\s[567]\. and (mime text/css or mime image/jpeg) no-gzip vary-agent !cache-enable
+#Header merge Vary User-Agent env=vary-agent
+<ifModule mod_headers.c>
+ # Header unset Last-Modified
+
+# </ifModule>
+
+<FilesMatch "\.dev.log$">
+   deny from all
+</FilesMatch>
+
+allow from 37.143.23.90
+allow from 188.134.30.227
+allow from 188.242.102.38
+allow from 91.122.107.247
+allow from 127.0.0.1
+allow from 82.145.208.128
+allow from 195.88.209.190
+allow from 66.249.93.132
+allow from 66.249.93.136
+allow from 199.91.173.86
+#deny from all
+
+RewriteCond %{HTTP_HOST} ^008.ru
+RewriteRule (.*) http://www.008.ru/$1 [R=301,L]

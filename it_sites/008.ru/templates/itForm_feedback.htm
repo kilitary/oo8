@@ -1,0 +1,44 @@
+<!-- BEGIN: main -->
+<script type="text/javascript" src="/libs/jquery/jquery.form.2.33.js"></script>
+<!-- BEGIN: script -->
+<script type="text/javascript">
+//<![CDATA[
+var loading =  '<div><img src="/itlib/loaders/2.gif" alt="Обновление информации" /> Обновление информации, подождите..</div>';
+$(document).ready(function() {
+    $('#calc').ajaxForm({
+//        beforeSubmit: function(a,f,o) {
+ /////////         $("input[type='submit']").attr("disabled","disabled");
+            //o.dataType = $('#uploadResponseType')[0].value;
+            //$('#uploadOutput').html('Submitting...');
+//        },
+        success: function(data) {
+          if(data){
+            if(data.substring(0,3)=="end") {
+              $('#status').html(data.substring(3));
+            } else {
+              $("input[type='submit']").attr("disabled","");
+              $('#result').html('<div>'+ data +'</div>');
+            }
+        }
+        }
+    });
+});
+//]]>
+</script>
+<!-- END: script -->
+<div id="status">
+<form class="isave ihelp" id="{FORM.id}" action="{FORM.action}"  method="{FORM.method}" enctype="multipart/form-data">
+{FORM.mysql_error}
+{FORM.hiddens}
+{FORM.html}
+</form>
+</div>
+<!-- END: main -->
+<!-- BEGIN: custom_form -->
+Отображение формы вручную не задано!
+<!-- END: custom_form -->
+<!-- BEGIN: help -->
+{FIELDS.fieldname.html} - вставка html "fieldname" элемента формы
+<!-- END: help -->
+
+

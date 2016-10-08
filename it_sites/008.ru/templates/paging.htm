@@ -1,0 +1,25 @@
+<!-- BEGIN: main -->
+<div class="paging">
+<br /><b>Страница</b>: 
+<!-- BEGIN: pages -->
+<!-- BEGIN: page_first -->
+<a href="{IT.qs}">{pagenum}</a> 
+<!-- END: page_first -->
+<!-- BEGIN: page -->
+<a href="{IT.qs}{IT.pageMarker}/{pagenum}/">{pagenum}</a> 
+<!-- END: page -->
+<!-- BEGIN: page_prev -->
+[<a href="{IT.qs}">|&laquo</a>] 
+[<a href="{IT.qs}{IT.pageMarker}/{pagenum}/">&laquo;&laquo;</a>] 
+<!-- END: page_prev -->
+<!-- BEGIN: page_next -->
+[<a href="{IT.qs}{IT.pageMarker}/{pagenum}/">&raquo;&raquo;</a>] 
+[<a href="{IT.qs}{IT.pageMarker}/last/">&raquo;|</a>] 
+<!-- END: page_next -->
+<!-- BEGIN: page_selected -->
+<span class="sel">{pagenum}</span>
+<!-- END: page_selected -->
+<!-- END: pages -->
+из: {IT.allPages}; <b>Всего записей</b>:{IT.allRecords}<br /><br />
+</div>
+<!-- END: main -->

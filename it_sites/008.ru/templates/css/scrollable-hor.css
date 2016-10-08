@@ -1,0 +1,75 @@
+#scrollable_gallery {
+  background:#e5e5e5;
+  height:120px; 
+  width:100%;
+  margin:5px auto 10px auto;
+  padding-top:5px;
+/*  display:none;*/
+}
+#scrollable_products {
+  background:#f2ece0;
+  height:120px; 
+  padding-top:5px;
+/*  display:none;*/
+}
+
+
+.scrollable {  
+  position:relative;
+  overflow:hidden;
+  width:462px;
+  height:124px; 
+}
+
+.scrollable .thumbs { 
+  position:absolute;
+  width:20000em;  
+  clear:both;
+  text-align:center;
+}
+
+
+.scrollable .thumbs .desc {
+overflow:auto;
+height:280px;
+}
+
+
+.scrollable .thumbs>div {
+  float:left;
+}
+
+
+/* single item */
+.scrollable .thumbs div.si {
+  float:left;
+  width:156px;
+  height:104px;
+  overflow:hidden;
+/*  padding:0 2px;*/
+  color:#fff;
+  margin:2px;
+  display:table-cell;
+  line-height:110px;
+  vertical-align:middle;
+  padding-top:2px;
+  background:#fff;
+  border:1px solid #ccc;
+  cursor:pointer;
+  text-align:center;
+}
+
+.scrollable .thumbs div.si img{
+  vertical-align: middle;
+  border:1px solid #ccc;
+}
+
+
+.scrollable .thumbs div.si:hover {
+  border:1px solid #016eb2;
+}
+
+.scrollable .thumbs div.si.active {
+  border:1px solid red;
+  cursor:default;
+}

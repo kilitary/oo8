@@ -1,0 +1,423 @@
+ th {
+    text-align: left;
+    padding-right: 15px;
+ }
+ 
+ .hdrnav h1 {
+    font-size: 16px;
+    display: inline;
+    padding-right: 15px;
+    text-shadow: none
+ }
+ 
+ .hdrnav a {
+    font-size: 16px;
+    display: inline;
+    text-decoration: none
+ }
+ 
+ .hdrnav a:hover {
+    display: inline;
+    border-bottom: 1px solid blue;
+    text-decoration: none
+ }
+ 
+ .statdiv {
+    padding: 20px;
+    float: left;
+    font-family: tahoma;
+    font-size: 11px;
+ }
+ 
+ .statdiv > h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #abdcec;
+    padding-bottom: 13px;
+    padding-left: 0px;
+    height: 15px;
+    line-height: 10px !important;
+ }
+ 
+ h2 {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-family: segoe ui;
+    vertical-align: middle
+ }
+ 
+ .firmrow:hover {
+    background-color: lightgrey;
+    color: blue
+ }
+ 
+ td {
+    padding-right: 18px;
+    line-break: none;
+    font-size: 13px;
+    border-right: 1px dotted lightgrey
+ }
+ 
+ .editfirm td {
+    font-size: 12px
+ }
+ 
+ hr {
+    height: 3px;
+    margin: 0;
+    padding: 0
+ }
+ 
+ .maincontent {
+    padding-top: 15px;
+ }
+ 
+ .firmdiv {
+    padding-top: 15px
+ }
+ 
+ .nodecor a,
+ a:visited,
+ a:link {
+    text-decoration: none;
+ }
+ 
+ .ui-tooltip,
+ .arrow:after {
+    background: white;
+    border: 2px solid white;
+ }
+ 
+ .ui-tooltip {
+    padding: 10px 20px;
+    color: #94907c;
+    border-radius: 20px;
+    font: bold 14px "segoe ui";
+    box-shadow: 0 0 7px black;
+ }
+ 
+ .arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+ }
+ 
+ .arrow.top {
+    top: -16px;
+    bottom: auto;
+ }
+ 
+ .arrow.left {
+    left: 20%;
+ }
+ 
+ .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+ }
+ 
+ .arrow.top:after {
+    bottom: -20px;
+    top: auto;
+ }
+ 
+ .odd {
+    background-color: #efefef
+ }
+ /*input[type="button"],input[type="submit"] {font-size:14px;padding:3px;border:0;border:1px solid lightgray}
+  input[type="button"]:hover,input[type="submit"]:hover {cursor:pointer;background-color:white;border:1px solid black}
+  input {padding-top:5px;padding-bottom:5px;border-right:1px;border-top:2px solid gray;padding-left:3px}
+  textarea:hover,input[type="text"]:hover {border:1px solid blue}*/
+ 
+ .underlined:visited,
+ .underlined {
+    border-bottom: 2px dotted gray;
+    color: green
+ }
+ 
+ .underlined:hover {
+    border-bottom: 2px solid red
+ }
+ 
+ label,
+ strong {
+    font-size: 16px;
+    padding-bottom: 9px;
+    margin-bottom: 9px;
+    font-family: segoe ui;
+ }
+ 
+ #result-search {
+    left: 48px;
+    position: absolute;
+    width: 65.76915em;
+    background-color: white;
+    z-index: 100;
+    height: auto;
+    padding-bottom: 15px;
+    display: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .1)inset, 0 10px 20px -5px rgba(0, 0, 0, .4);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1)inset, 0 10px 20px -5px rgba(0, 0, 0, .4);
+ }
+ 
+ #result-search ul li {
+    padding-bottom: 1px;
+    cursor: pointer;
+    background-color: white;
+ }
+ 
+ #result-search ul li:hover {
+    text-decoration: underline;
+ }
+ 
+ .clear {
+    clear: both
+ }
+ 
+ .hg:hover {
+    background-color: #DCEFE9;
+    color: black
+ }
+ 
+ .firmselect option,
+ select {
+    font-size: 11px;
+ }
+ 
+ .contentdiv {
+    border-left: 15px solid cream;
+    padding-left: 15px;
+    border-right: 1px solid gray;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 13px solid orange;
+    padding-bottom: 10px;
+    padding-left: 15px
+ }
+ 
+ .div_menu {
+    clear: both
+ }
+ 
+ .adm_menu {
+    margin: 0px
+ }
+ 
+ select#firmsel,
+ #firmsel > option {
+    color: blue;
+    font-size: 13px;
+    width: 800px
+ }
+ 
+ #tabs-nested > .ui-tabs-panel {
+    padding: 0em;
+ }
+ 
+ #tabs-nested-left {
+    position: relative;
+    padding-left: 6.5em;
+ }
+ 
+ #tabs-nested-left .ui-tabs-nav {
+    position: absolute;
+    left: 0.25em;
+    top: 0.25em;
+    bottom: 0.25em;
+    width: 6em;
+    padding: 0.2em 0 0.2em 0.2em;
+ }
+ 
+ #tabs-nested-left .ui-tabs-nav li {
+    right: 1px;
+    width: 100%;
+    border-right: none;
+    border-bottom-width: 1px !important;
+    -moz-border-radius: 4px 0px 0px 4px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0px 0px 4px;
+    overflow: hidden;
+ }
+ 
+ #tabs-nested-left .ui-tabs-nav li.ui-tabs-selected,
+ #tabs-nested-left .ui-tabs-nav li.ui-state-active {
+    border-right: 1px solid transparent;
+ }
+ 
+ #tabs-nested-left .ui-tabs-nav li a {
+    float: right;
+    width: 100%;
+    text-align: right;
+ }
+ 
+ #tabs-nested-left > div {
+    height: 10em;
+    overflow: auto;
+ }
+ 
+ body {
+    min-height: 100% !important
+ }
+ 
+ .contentdiv {
+    min-height: 77% !important
+ }
+ 
+ .tabs {
+    min-height: 77% !important
+ }
+ 
+ #content {
+    display: none;
+    font-size: 12px;
+ }
+ 
+ .tabs {
+    padding-left: 15px !important;
+    margin-top: 5px !important
+ }
+ 
+ .cwrapper {
+    font-size: 24px !important
+ }
+ 
+ h2 {
+    padding-left: 5px
+ }
+ /*select,option {padding:5;font-size:15px  !important ;}
+input[type=submit],input[type=checkbox] {width:auto !important;}
+select,option,input[type=text]{width:400px !important;font-size:18px  !important }
+option,select {padding:0px;margin:0px}
+*/
+ 
+ .catcheckbox {
+    height: auto !important
+ }
+ 
+ input {
+    padding: 4px !important
+ }
+ 
+ h3 {
+    font-size: 18px;
+    padding: 5px !important
+ }
+ 
+ .ui-widget input,
+ textarea {
+    font-size: 13px !important;
+    font-family: segoe ui !important
+ }
+ 
+ .firmtbl {
+    width: 100%;
+ }
+ 
+ .firmtbl td {
+    padding-top: 6px
+ }
+ 
+ #tree > li {
+    list-style: none;
+ }
+ 
+ .bannerdiv {
+    padding-top: 20px;
+ }
+ 
+ select {
+    font-size: 16px !important
+ }
+ 
+ #contentdiv > input[type=button] {
+    padding: 15px !important
+ }
+ 
+ .debugdiv {
+    color: lightgray;
+    font-weight: bolder
+ }
+ 
+ #metrodiv {
+    font-size: 14px
+ }
+ 
+ .officelistdiv li {
+    padding: 6px;
+    font-family: lucida console !important;
+    font-size: 13px !important;
+ }
+ 
+ .shortname {
+    font-size: 14px;
+    color: black;
+    padding: 5px;
+    margin: auto
+ }
+ 
+ .addmore a:hover {
+    border-bottom: 2px dashed orange
+ }
+ 
+ .inputarea {
+    font-family: lucida console !important;
+    font-size: 11px !important;
+    width: 100%;
+ }
+ 
+ .last table td,
+ .last table tr {
+    border: 0px;
+    font-size: 12px;
+    font-family: consolas;
+    padding-right: 10px;
+    border-bottom: 1px solid #DFE4E2;
+ }
+ 
+ .last tr:hover {
+    background-color: white;
+ }
+ 
+ input:hover,
+ textarea:hover,
+ select:hover {
+    background-color: #F9F5F5;
+    color: darkblue;
+ }
+ 
+ select:hover,
+ option:hover,
+ label:hover,
+ option:active,
+ input[type=button]:hover,
+ input[type=submit]:hover {
+    cursor: pointer;
+ }
+ 
+ input[type=button]:hover,
+ input[type=submit]:hover {
+    color: darkorange;
+ }
+ 
+ h3,
+ h1,
+ h2 {
+    font-size: 18px !important;
+    margin: 0px !important;
+ }

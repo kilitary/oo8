@@ -1,0 +1,7 @@
+deny from all
+allow from 37.143.23.90
+allow from 188.134.30.227
+allow from 188.242.102.38
+allow from 91.122.107.247
+allow from 127.0.0.1
+allow from 195.88.209.190

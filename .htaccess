@@ -1,0 +1,138 @@
+
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript text/*
+#SetOutputFilter DEFLATE
+#Header always append X-Frame-Options SAMEORIGIN
+#Header always append X-008-Engine evo20150929
+Options Indexes FollowSymLinks
+DirectoryIndex index.php index.html
+AddType application/x-httpd-php5 .php
+AddDefaultCharset UTF-8
+php_value allow_url_fopen 1
+php_value allow_url_include 0
+php_value error_reporting 1
+php_flag html_errors On
+php_flag display_errors On
+php_flag magic_quotes_gpc Off
+php_value error_log /home/new.008.ru/html/.dev.log
+php_flag register_globals Off
+php_value session.save_path "/tmp/session"
+php_value mbstring.func_overload          6
+php_value default_charset     UTF-8
+php_value mbstring.language   uni
+php_value mbstring.internal_encoding UTF-8
+php_value mbstring.detect_order UTF-8,CP1251
+#400 - Bad Request
+ErrorDocument 400 /error.php
+#401 - Unauthorized
+ErrorDocument 401 /error.php
+#402 - Payment Required
+ErrorDocument 402 /error.php
+#403 - Forbidden
+ErrorDocument 403 /error.php
+#404 - Not Found
+ErrorDocument 404 /404/
+#405 - Method Not Allowed
+ErrorDocument 405 /error.php
+#406 - Not Acceptable
+ErrorDocument 406 /error.php
+#407 - Proxy Authentication Required
+ErrorDocument 407 /error.php
+#408 - Request Time-out
+ErrorDocument 408 /error.php
+#409 - Conflict
+ErrorDocument 409 /error.php
+#410 - Gone
+ErrorDocument 410 /error.php
+#411 - Length Required
+ErrorDocument 411 /error.php
+#412 - Precondition Failed
+ErrorDocument 412 /error.php
+#413 - Request Entity Too Large
+ErrorDocument 413 /error.php
+#414 - Request-URI Too Large
+ErrorDocument 414 /error.php
+#415 - Unsupported Media Type
+ErrorDocument 415 /error.php
+#500 - Internal Server Error
+#ErrorDocument 500 /error.php
+#501 - Not Implemented
+ErrorDocument 501 /error.php
+#502 - Bad Gateway
+ErrorDocument 502 /error.php
+#503 - Service Unavailable
+ErrorDocument 503 /error.php
+#504 - Gateway Time-out
+ErrorDocument 504 /error.php
+#505 - HTTP Version not supported
+ErrorDocument 505 /error.php
+#AddHandler server-parsed .ssi
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^\/(css|js|images|system|server-statuz|server-inf0)\/.*$
+RewriteRule ^(.+)$ /it_sites/008.ru/templates%{REQUEST_URI} [L]
+
+RewriteCond %{REQUEST_URI} ^\/(server-statuz|server-inf0|content)\/.*$
+RewriteRule ^(.+)$ /it_sites/008.ru%{REQUEST_URI} [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+RewriteCond %{HTTP_HOST} ^008.ru
+RewriteRule (.*) http://www.008.ru/$1 [R=301,L]
+
+<ifModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 day"
+ExpiresByType text/html "access plus 1 day"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+ExpiresByType application/x-javascript "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/ico "access plus 1 year"
+</ifModule>
+
+
+<ifModule mod_headers.c>
+  <filesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+    Header set Cache-Control "max-age=22592000, public"
+  </filesMatch>
+  <filesMatch "\\.(css)$">
+    Header set Cache-Control "max-age=11604800, public"
+  </filesMatch>
+  <filesMatch "\\.(js)$">
+    Header set Cache-Control "max-age=11216000, private"
+  </filesMatch>
+  <filesMatch "\\.(xml|txt)$">
+    Header set Cache-Control "max-age=11216000, public, must-revalidate"
+  </filesMatch>
+  <filesMatch "\\.(html|htm|php)$">
+    Header set Cache-Control "max-age=1, private, must-revalidate"
+  </filesMatch>
+</ifModule>
+
+FileETag None
+
+<FilesMatch "\.dev.log$">
+   deny from all
+</FilesMatch>
+
+
+#allow from 37.143.23.90
+#allow from 188.134.30.227
+#allow from 188.242.102.38
+#allow from 91.122.107.247
+#allow from 127.0.0.1
+#allow from 195.88.209.190
+#allow from 78.25.120.152
+#allow from 66.249.93.132
+#allow from 66.249.93.136
+#allow from 199.91.173.86
+#deny from all
+

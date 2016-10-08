@@ -1,0 +1,61 @@
+DIV.scrollable {
+  FLOAT: left
+}
+A.prev {
+  MARGIN: 53px 5px; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(/itlib/scrollable/01/left.png) no-repeat; FLOAT: left; HEIGHT: 18px; CURSOR: pointer
+}
+A.next {
+  MARGIN: 53px 5px; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(/itlib/scrollable/01/left.png) no-repeat; FLOAT: left; HEIGHT: 18px; CURSOR: pointer
+}
+A.prevPage {
+  MARGIN: 43px 10px; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(/itlib/scrollable/01/left.png) no-repeat; FLOAT: left; HEIGHT: 18px; CURSOR: pointer
+}
+A.nextPage {
+  MARGIN: 43px 10px; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(/itlib/scrollable/01/left.png) no-repeat; FLOAT: left; HEIGHT: 18px; CURSOR: pointer
+}
+A.prev:hover {
+  BACKGROUND-POSITION: 0px -18px
+}
+A.next:hover {
+  BACKGROUND-POSITION: 0px -18px
+}
+A.prevPage:hover {
+  BACKGROUND-POSITION: 0px -18px
+}
+A.nextPage:hover {
+  BACKGROUND-POSITION: 0px -18px
+}
+A.disabled {
+  VISIBILITY: hidden !important
+}
+A.next {
+  BACKGROUND-IMAGE: url(/itlib/scrollable/01/right.png); CLEAR: right
+}
+A.nextPage {
+  BACKGROUND-IMAGE: url(/itlib/scrollable/01/right.png); CLEAR: right
+}
+DIV.navi {
+  WIDTH:auto; HEIGHT: 20px;
+}
+DIV.navi A {
+  MARGIN: 3px; WIDTH: 8px; BACKGROUND: url(/itlib/scrollable/01/navigator.png) no-repeat 0px 0px; FLOAT: left; HEIGHT: 8px; CURSOR: pointer
+}
+DIV.navi A:hover {
+  BACKGROUND-POSITION: 0px -8px
+}
+DIV.navi A.active {
+  BACKGROUND-POSITION: 0px -16px
+}
+
+a.prev.browse.left {
+	position: absolute;
+	left: 10px;
+	top: 0;
+}
+
+a.next.browse.right {
+	position: absolute;
+	right: 10px;
+	top: 0;
+}
+

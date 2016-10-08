@@ -1,0 +1,8 @@
+ErrorDocument 404 discount008.png
+php_value error_reporting 7
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ discount008.png [L,QSA]
+

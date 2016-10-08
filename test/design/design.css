@@ -1,0 +1,298 @@
+#betav, #logobp, #logodesc, #logodesc-more {
+	display:none;
+}
+
+div.clear {
+	clear:both;
+}
+
+body {
+	background: #fff url(/assets/img/top-bg-line.gif) 0px -72px repeat-x;
+	padding:0px;
+}
+
+.zoom {
+	max-width: 1280px;
+	min-width: 990px;
+	margin-top:0px;
+	background: transparent;
+}
+
+#top_icons {
+  width:auto;
+  position: static;
+  top: 0px;
+  right: 0px;
+  margin-top:7px;
+  float:right;
+}
+#top_icons:after {
+	clear:both;
+}
+#top_icons ul {
+  margin:0px;
+}
+
+#top_tels {
+  float:left;
+  margin-top:5px;
+  margin-bottom: 10px;
+}
+#top_tels  span {
+	font-weight:bold;
+	font-size:16px;
+	color:red;
+	text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+}
+
+
+
+.ilogos_top {
+	top:30px;
+	float:right;
+	position:static;
+	margin-top:10px;
+}
+
+#logo {
+  padding: 0;
+  height: 100px;
+  margin:0px;
+  float:left;
+}
+
+#itsearch {
+	border-radius: 25px;
+}
+#itsearch>img {
+	/*border-radius: 25px;*/
+}
+div.iright {
+	/*border-radius: 40px;*/
+}
+
+#searchform input.what {
+	margin-top: 0px;
+	margin-bottom: 4px;
+	padding: 4px 10px 3px 5px;
+	font-size: 17px;
+	color: #777;
+	border-radius: 5px;
+	border:1px solid #fff;
+	width: 98%;
+}
+#searchform input.search {
+	margin-top: -1px;
+	border-radius: 5px;
+	border:1px solid #777;
+	background-color:#fff;
+	padding:6px 7px 6px 7px;
+	cursor:pointer;
+	font-size: 15px;
+	height: auto;
+}
+#searchform input.search:hover {
+	background-color:#eee;
+}
+
+#searchform span.example {
+  margin-right: 7px;
+}
+#searchform .comment {
+  font-size: 11px;
+}
+#searchform .comment span {
+  opacity: 0.6;
+}
+#searchform .comment span.sample:hover {
+  opacity: 1;
+}
+
+
+
+
+#catalogs {
+  margin: 0 0 -29px 200px;
+  height: 34px;
+}
+#catalogs .item a {
+	font-size:14px;
+	font-weight:normal;
+	white-space: nowrap;
+	padding: 7px 6px;
+}
+#searchform {
+	margin: 30px 5px 0 0;
+}
+
+.div_menu {
+  margin: 0 0 0 196px;
+  height: 30px;
+  bdackground-color:#f0f0f0;
+  border-radius: 5px;
+  margin-bottom:40px;
+}
+
+
+.ritem {
+	padding: 0px 70px 20px 30px;
+}
+.ritem a {
+	line-height: 18px;
+}
+  
+.ricon {
+  margin-left: -48px;
+  margin-top: 5px;
+}
+
+h2 a:link {
+	text-decoration:none;
+}
+
+.costuffs {
+	padding: 0px 10px 10px 20px;
+	background:#f0f0f0 url(/assets/img/top-left-header.gif) 0px -20px repeat-x;
+	b_ox-shadow: 2px 2px 14px -3px rgba(0,0,0,0.5);
+	border-radius: 0px 15px 0px 15px;
+	margin-bottom:20px;
+}
+
+.costuffs h2 {
+	padding-bottom:3px;
+}
+
+.costuffs i.comment {
+	font-style: normal;
+	font-size:11px;
+}
+
+.costuffs ol {
+	list-style-type:none;
+	margin: 20px 0 0 0px;
+}
+.costuffs ol li {
+	margin: 10px 0 0 0px;
+	padding:0px 0px 0px 15px;
+	background: transparent url(/assets/img/dash.png) 0px 7px no-repeat;
+}
+.costuffs ol li b {
+	display:block;
+	font-style:normal;
+	font-weight:normal;
+}
+.costuffs ol li i {
+	font-style:italic;
+}
+  
+.costuffs ol li>div>a {
+	font-weight:bold;
+}
+
+#breadcrumb {
+	margin-top:18px;
+	color:#fff;
+}
+  
+#breadcrumb a:link, #breadcrumb a:visited {
+	color: #fff;
+}
+
+
+
+#topmenu {
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+#topmenu:after {
+	clear:both;
+}
+#topmenu  li {
+	list-style-type:none;
+	float:left;
+	margin-right:10px;
+}
+#topmenu  li.r {
+	float:right;
+}
+#topmenu  li.l a {
+	display:block;
+	padding:5px 12px 5px 12px;
+	background-color: #f0f0f0;
+	text-decoration:none;
+	border-radius: 0px 7px 0px 7px;
+	color:#475460;
+}
+#topmenu  li.l a:hover {
+	background-color: #e9e9e9;
+}
+#topmenu  li.r a {
+	display:block;
+	margin-top:5px;
+}
+#topmenu  li.l a{
+	font-size:13px;
+}
+#topmenu  li.l  a {
+	font-weight:normal;
+}
+#topmenu  li.l  a:hover {
+	color: #ff7e00;
+}
+  
+#catalogs .item.addnew {
+	background:none;
+}
+#catalogs .item.addnew a {
+	text-decoration: underline;
+  font-weight: Bold;
+  text-decoration: none;
+  border-bottom: 2px dotted #ffcc00;
+  padding: 2px 0px;
+  margin-left: 10px;
+}
+#catalogs .item.addnew a:hover {
+	text-decoration: none;
+}
+#catalogs .item.over {
+	border-top-color:transparent;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

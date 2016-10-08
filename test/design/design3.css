@@ -1,0 +1,47 @@
+#co-card .blockGallery {
+  border-radius: 0px 10px 0px 10px;
+}
+
+#co-main {
+	background:0;
+	margin-top: 10px;
+}
+
+#co-info {
+	background:0;
+}
+
+.co_logo {
+  padding: 0;
+  margin: 3px 20px 5px 0px;
+}
+
+#co-prod {
+	background:0;
+	padding: 0px 5px 5px 5px;
+}
+
+.co_contacts {
+	border:1px solid #ddd;
+	background: #f5f5f5;
+	padding: 10px;
+}
+
+ul.listitems li.sel {
+  list-style-image: url('/itlib/boolets/point_red.gif');
+}
+ul.listitems li.sel div {
+	padding: 5px 0 5px 2px!important;
+	margin: 5px 0 0 0!important;
+	background: transparent!important;
+}
+ul.listitems li.sel div a {
+  color: #000;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+
+
+
+

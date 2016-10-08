@@ -1,0 +1,66 @@
+/* root element for scrollable */
+div.scrollable.vertical {  
+  
+  /* required settings */
+  position:relative;
+  overflow:hidden;  
+
+  /* vertical scrollers have typically larger height than width */  
+  height: 460px;   
+  width: 49%; 
+}
+
+/* root element for scrollable items */
+div.scrollable.vertical div.items { 
+  position:absolute;
+  
+  /* this time we have very large space for height */ 
+  height:20000em; 
+  margin: 0px;
+}
+
+/* override item style defined in scrollable.css */
+div.scrollable div.items div {
+  float:none;
+  margin:10px 0px;
+}
+
+/* single scrollable item */
+div.scrollable div.items div {
+  float:left;
+  
+  /* background image */
+/*  background: #000 url(/images/scrollable/white.jpg) no-repeat 0 0;*/
+  
+  
+  /* text/font settings */
+  /*
+  color:#999;
+  text-align:center;
+  width:178px;
+  height:86px;
+  padding:25px 0px;
+  font-size:70px;
+  margin-right: 10px; 
+  cursor:pointer;
+  */
+}
+
+
+/* mouseover state */
+div.scrollable div.items div:hover {  
+  background-position:-178px 0px;
+}
+
+/* clicked state */
+div.scrollable div.items div:active { 
+  background-position:-356px 0;
+}
+
+/* active item */
+div.scrollable div.items div.active { 
+  background-position:-534px 0;
+  cursor:default;
+}
+
+

@@ -1,0 +1,31 @@
+From: =?UTF-8?B?aW5mb0AwMDgucnU=?= <info@008.ru>
+X-Mailer: PHPMail
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="143896016155c4ca217c774"
+
+--143896016155c4ca217c774
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Компания http://www.008.ru/company/3873/
+Тип: Ошибка в тексте
+Контакт: ми
+Email: 
+Описание: Тест-тест
+IP: 37.143.23.90
+Время: пятница,  7 августа 2015 г. 18:09:21
+Ссылка для редактирования: http://008.evodesign.ru/system/firms/edit/3873/
+
+
+--143896016155c4ca217c774
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<body>
+Компания http://www.008.ru/company/3873/<br/>Тип: Ошибка в тексте<br/>Контакт: ми<br/>Email: <br/>Описание: Тест-тест<br/>IP: 37.143.23.90<br/>Время: пятница,  7 августа 2015 г. 18:09:21<br/>Ссылка для редактирования: <strong>http://008.evodesign.ru/system/firms/edit/3873/</strong><br/>
+</body>
+</html>
+
+--143896016155c4ca217c774--
+

@@ -1,0 +1,168 @@
+DMitry(1)                                               DMitry(1)
+
+
+
+NNAAMMEE
+       DMitry - Deepmagic Information Gathering Tool
+
+SSYYNNOOPPSSIISS
+       ddmmiittrryy [Options] host
+       ddmmiittrryybboott [Options] [Name] [Irc Server]
+
+DDEESSCCRRIIPPTTIIOONN
+       DMitry   (Deepmagic   Information  Gathering  Tool)  is  a
+       UNIX/(GNU)Linux Command Line program  coded  purely  in  C
+       with the ability to gather as much information as possible
+       about a host.
+
+       DMitry has a base functionality with the  ability  to  add
+       new  functions.   Basic functionality of DMitry allows for
+       information to be gathered about a target host from a sim-
+       ple  whois  lookup on the target to UpTime reports and TCP
+       portscans.
+
+       The application is considered a tool to assist in informa-
+       tion  gathering  when  information  is required quickly by
+       removing the need  to  enter  multiple  commands  and  the
+       timely  process  of  searching  through data from multiple
+       sources.
+
+       To get straight into DMitry without reading this document,
+       you  can initially type "dmitry target", this will perform
+       the majority of functions on the target.
+
+
+OOPPTTIIOONNSS
+       Options  should  be  passed  to  DMitry  in  the  form  of
+       '-option'.   Only options known by DMitry will be used and
+       others will be ignored.  If options are not  passed  as  a
+       group  block,  the  trailing  options will be considered a
+       host target.
+
+       --oo ffiilleennaammee
+              Create an ascii text output of the results  to  the
+              "filename"  specified.   If  no  output filename is
+              specified  then  output  will  be  saved  to  "tar-
+              get.txt".   If  this option is not specified in any
+              form output will be sent  to  the  standard  output
+              (STDOUT)  by  default.   This option MUST trail all
+              other options, i.e. "./dmitry -winseo target".
+
+       --ii     Perform an Internet Number whois lookup on the tar-
+              get.   This requires that the target be in the form
+              of a 4 part Internet Number with each octal  seper-
+              ated using the `.' notation. For example, "./dmitry
+              -i 255.255.255.255".
+
+       --ww     Perform a whois lookup on the 'host' target.   This
+              requires  that  the  target be in a named character
+              format.  For example,  "./dmitry  -w  target"  will
+              perform a standard named whois lookup.
+
+       --nn     Retrieve  netcraft.com  data  concerning  the host,
+              this includes Operating System, Web Server  release
+              and UpTime information where available.
+
+       --ss     Perform a SubDomain search on the specified target.
+              This will use serveral search engines to attempt to
+              locate  sub-domains  in  the  form  of  sub.target.
+              There is no set limit to the  level  of  sub-domain
+              that  can  be  located, however, there is a maximum
+              string length of 40 characters (NCOL 40)  to  limit
+              memory usage.
+
+       --ee     Perform  an  EmailAddress  search  on the specified
+              target.  This modules works using the same  concept
+              as  the  SubDomain  search  by attempting to locate
+              possible e-mail addresses for a target  host.   The
+              e-mail  addresses  may  also  be  for possible sub-
+              domains of the target host.  There is  a  limit  to
+              the  length of the e-mail address set to 50 charac-
+              ters (NCOL 50) to limit memory usage.
+
+       --pp     Perform a TCP Portscan on the host target.  This is
+              a  pretty  basic  module  at  the moment, and we do
+              advise users to use something like nmap  (www.inse-
+              cure.org/nmap/)  instead.   This  module  will list
+              open, closed and filtered ports within  a  specific
+              range.   There  will probably be little advancement
+              upon this module, though there will be some  alter-
+              ations  to  make  it  a  little more user friendly.
+              There are also other options for this  module  that
+              can affect the scan and its relative output.
+
+       --ff     This  option  will cause the TCP Portscan module to
+              report/display output of filtered ports.  These are
+              usually ports that have been filtered and/or closed
+              by a firewall at the specified  host/target.   This
+              option requires that the '-p' option be passed as a
+              previous option.  For example, "./dmitry  -pf  tar-
+              get".
+
+       --bb     This  option  will cause the TCP Portscan module to
+              output Banners if they are received  when  scanning
+              TCP  Ports.   This  option  requres  that  the '-p'
+              option be passed as a previous option.   For  exam-
+              ple, "./dmitry -pb target".
+
+       --tt     This  sets  the  Time To Live (TTL) of the Portscan
+              module when scanning individual ports.  This is set
+              to  2 seconds by default.  This is usually required
+              when scanning a host that has a firewall and/or has
+              filtered ports which can slow a scan down.
+
+EEXXAAMMPPLLEESS
+       This  section  presents  some  example queries that can be
+       made using dmitry.  The hosts  and  targets  used  in  the
+       examples are merely used for demonstration.
+
+       ddmmiittrryy --ww eexxaammppllee--hhoosstt..ccoomm
+
+       This will perform a named whois (INIC-WHOIS) lookup on the
+       target host, displaying results  to  the  standard  output
+       (STDOUT).
+
+       ddmmiittrryy --wwiinnsseeppoo ssoommeetteexxttffiillee..ttxxtt eexxaammppllee--hhoosstt..ccoomm
+
+       This  will  perform  all the basic functions on the target
+       host and store all the output into "sometextfile.txt".
+
+       ddmmiittrryy --wwiinnsseeppoo eexxaammppllee--hhoosstt..ccoomm
+
+       This will perform all the basic functions  on  the  target
+       host and store all the output into "example-host.com.txt".
+
+       ddmmiittrryy --wwiinnsseeppffbboo 112277..00..00..11
+
+       This will perform all the basic functions  on  the  target
+       host  and store all the output into "127.0.0.1.txt".  This
+       will also display banners and show filtered ports.
+
+
+BBUUGGSS
+       Bugs? if you find any e-mail me at james@mor-pah.net  with
+       information  your  OS, what caused the problem, the error,
+       suggestions etc.  Thanx
+
+
+DDIISSTTRRIIBBUUTTIIOONN
+       DMitry, Deepmagic Information Gathering Tool is  Copyright
+       (C) 2001 - 2005 by James Greig.
+
+       Source  code is provided with this software to allow users
+       and developers to understand  the  software  for  security
+       auditing purposes.  We allow users to view the source code
+       so that they are able to port the  software  to  different
+       Operating  Systems  with the ability to locate bugs and so
+       forth.
+
+
+AAUUTTHHOORR
+       PPrrooggrraammmmeerr//CCrreeaattoorr
+       James Greig - James@mor-pah.net - http://www.mor-pah.net
+       CCoonncceeppttuuaall DDeessiiggnn
+       Phased - http://www.deepmagic.org.uk
+
+
+
+1.2a                       January 2005                 DMitry(1)

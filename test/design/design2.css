@@ -1,0 +1,122 @@
+#h1-rubric span.count_items {
+  font-size: 14px;
+  background: url('/assets/img/arrow-down-3-16.png') no-repeat right;
+  padding-right: 25px;
+  padding-left:3px;
+  cursor: pointer;
+}
+
+#h1-rubric span.count_items:hover {
+  background: url('/assets/img/arrow-down-3-16-red.png') no-repeat right;
+}
+
+.main_content .updown {
+	float:left;
+	padding:10px 30px 20px 70px;
+	background-color:#f0f0f0;
+	border-radius: 0px 25px 0px 25px;
+	margin-bottom:20px;
+}
+
+
+.main_content .updown div>div>div {
+	padding:2px 5px 2px 20px;
+	/*background: url(http://trimm.ru/assets/img/dush.png) 0 9px no-repeat;
+	background: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_right_48px-16.png) 0 2px no-repeat;*/
+	background: url(/assets/img/bullet-square.png) 7px 8px no-repeat;
+}
+
+.main_content .updown div>div>div.selected a {
+	font-weight:bold;
+	color: black;
+	text-decoration:none;
+	cursor: default;
+}
+
+.main_content .updown div.sh>div {
+	padding-left:0px;
+	
+}
+/*
+H1 {
+  FONT-SIZE: 2.5em;
+  text-shadow: none;
+}
+*/
+
+.paging {
+	padding: 0px 20px;
+	background-color: #f5f5f5;
+	margin-bottom: 20px;
+}
+
+.paging span.sel, .paging a {
+	display: inline-block;
+	padding: 3px 8px;
+	border-radius: 3px;
+	background-color: #e0e0e0;
+	border:1px solid transparent;
+}
+
+.paging span.sel {
+	border:1px solid #ccc;
+	background-color: transparent;
+}
+
+.paging a:hover {
+	background-color: #fff;
+}
+
+
+.paging .vsego {
+	float:right;
+	display: inline-block;
+	margin-top:3px;
+}
+
+.main_content .sresi {
+	padding: 12px 20px 20px 50px;
+	border-bottom: 0;
+	margin-bottom: 0;
+	border: 1px dotted transparent;
+}
+
+.main_content .sresi:nth-child(odd) {
+	background: #f9f9f9;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.main_content .sresi:nth-child(even) {
+	padding-top:20px;
+	border: 1px dotted #aaa;
+}
+
+
+.main_content .sresi:hover {
+	border: 1px dotted #333;
+}
+
+.copages {
+	padding-left: 0px;
+}
+
+
+.sresi h2 {
+  font-size: 1.6em;
+  text-indent: 0px;
+  margin-left: -37px;
+}
+
+.sresi h2 .cn1 {
+  background: #7c91a7;
+  padding: 3px 0px;
+  color: #fff;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+
+
+
