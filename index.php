@@ -3,8 +3,7 @@
 /////////////////////////////////////////////
 /// Evodesign Internet Promotion Company ///
 /// 008.ru Engine (c) 2015.             ///
-/// Chief mail:   info@evodesign.ru    ///
-/// Support mail: support@evodesign.ru///
+/// Support mail: kilitary@gmail.com  ///
 ////////////////////////////////////////
 //xdebug_disable();
 // подключем конфиг
